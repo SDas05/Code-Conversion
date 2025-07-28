@@ -244,47 +244,9 @@ except ImportError:
 4. **Update Context Extractor**:
    Add language-specific context types to `extract_context_from_tree()`.
 
-## 🤝 Contributing
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow PEP 8 style guidelines
-- Add tests for new features
-- Update documentation for API changes
-- Ensure all tests pass before submitting PR
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Tree-sitter**: For robust parsing capabilities
 - **OpenAI**: For GPT-4 language model
 - **FastAPI**: For web framework (if web interface is added)
 - **Pytest**: For testing framework
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/Code-Conversion/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/Code-Conversion/discussions)
-- **Email**: your.email@example.com
-
-## 🔄 Roadmap
-
-- [ ] Web interface for easier usage
-- [ ] Support for more programming languages
-- [ ] Batch processing for large repositories
-- [ ] Integration with CI/CD pipelines
-- [ ] Advanced code optimization features
-- [ ] Real-time collaboration features
-
----
-
-**Made with ❤️ by [Your Name]**
