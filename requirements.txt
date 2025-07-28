@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+httpx
+python-dotenv
+langchain
+jedi
+tree_sitter
+pydantic
+networkx
+pytest
