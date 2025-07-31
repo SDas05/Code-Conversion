@@ -2,7 +2,7 @@
 
 A sophisticated AI-powered code conversion tool that transforms source code between different programming languages while preserving functionality, structure, and best practices.
 
-## 🚀 Features
+## Features
 
 ### **Multi-Language Support**
 
@@ -28,7 +28,7 @@ A sophisticated AI-powered code conversion tool that transforms source code betw
 - **Semantic Analysis**: Validates functional equivalence
 - **Performance Analysis**: Monitors conversion quality and performance
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Code-Conversion/
@@ -61,7 +61,7 @@ Code-Conversion/
 └── config.json         # Configuration settings
 ```
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Python 3.8+**
 - **Git**
@@ -104,7 +104,7 @@ Create a `.env` file in the root directory:
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Basic Usage
 
@@ -196,20 +196,20 @@ pytest tests/test_analysis_layer.py
 pytest -v
 ```
 
-## 📊 Supported Languages
+## Supported Languages
 
-| Language   | Parsing         | Segmentation         | Context Extraction   |
-| ---------- | --------------- | -------------------- | -------------------- |
-| Python     | ✅ Tree-sitter  | ✅ Functions/Classes | ✅ Imports/Context   |
-| JavaScript | ✅ Tree-sitter  | ✅ Functions/Classes | ✅ Imports/Context   |
-| Java       | ✅ Tree-sitter  | ✅ Methods/Classes   | ✅ Imports/Context   |
-| C++        | ✅ Tree-sitter  | ✅ Functions/Classes | ✅ Includes/Context  |
-| C#         | ✅ Tree-sitter  | ✅ Methods/Classes   | ✅ Using/Context     |
-| TypeScript | ✅ Tree-sitter  | ✅ Functions/Classes | ✅ Imports/Context   |
-| SQL        | ✅ Tree-sitter  | ✅ Statements        | ✅ Schema/Context    |
-| R          | 🔄 AST Fallback | ✅ Functions         | ✅ Libraries/Context |
+| Language   | Parsing        | Segmentation         | Context Extraction  |
+| ---------- | -------------- | -------------------- | ------------------- |
+| Python     | ✅ Tree-sitter | ✅ Functions/Classes | ✅ Imports/Context  |
+| JavaScript | ✅ Tree-sitter | ✅ Functions/Classes | ✅ Imports/Context  |
+| Java       | ✅ Tree-sitter | ✅ Methods/Classes   | ✅ Imports/Context  |
+| C++        | ✅ Tree-sitter | ✅ Functions/Classes | ✅ Includes/Context |
+| C#         | ✅ Tree-sitter | ✅ Methods/Classes   | ✅ Using/Context    |
+| TypeScript | ✅ Tree-sitter | ✅ Functions/Classes | ✅ Imports/Context  |
+| SQL        | ✅ Tree-sitter | ✅ Statements        | ✅ Schema/Context   |
+| R          | AST Fallback   | Functions            | Libraries/Context   |
 
-## 🔧 Development
+## Development
 
 ### Project Structure
 
@@ -244,7 +244,7 @@ except ImportError:
 4. **Update Context Extractor**:
    Add language-specific context types to `extract_context_from_tree()`.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Tree-sitter**: For robust parsing capabilities
 - **OpenAI**: For GPT-4 language model

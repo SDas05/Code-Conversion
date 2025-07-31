@@ -34,7 +34,14 @@ class ModelClient:
                     temperature=self.temperature,
                     max_tokens=2048
                 )
-                return response.choices[0].message.content.strip()
+                content = response.choices[0].message.content.strip()
+                # Remove markdown code blocks if present
+                if content.startswith('```') and content.endswith('```'):
+                    lines = content.split('\n')
+                    if len(lines) >= 3:
+                        # Remove first and last lines (```language and ```)
+                        content = '\n'.join(lines[1:-1])
+                return content
             except openai.OpenAIError as e:
                 print(f"Attempt {attempt} failed: {e}")
                 if attempt == self.max_retries:

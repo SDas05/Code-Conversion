@@ -274,3 +274,8 @@ results/
 *.xml
 *.yaml
 *.yml
+
+# Project-specific ignores
+# End-to-End Machine Learning Project (large external project)
+End-to-End-Machine-Learning-Pipeline-Project/
+aggie_nexus_mvp/
