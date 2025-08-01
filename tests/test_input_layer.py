@@ -4,6 +4,11 @@ import tempfile
 import shutil
 from pathlib import Path
 from urllib.parse import urlparse
+import sys
+import os
+
+# Add the app directory to the Python path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from app.input.repo_scanner import RepositoryScanner
 from app.input.file_classifier import FileType

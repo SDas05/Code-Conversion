@@ -130,14 +130,22 @@ python app/main.py --source python --target javascript --input ./my_project
 python app/main.py --config custom_config.json
 ```
 
-#### Programmatic Usage
+#### Individual Usage (Single Layer tests)
 
-```python
-from app.orchestration.pipeline_controller import run_pipeline
+```bash
+# Run input layer test
+python tests/test_input_layer.py ./repo_path
 
-# Run the complete conversion pipeline
-run_pipeline()
+# Run analysis layer test
+python tests/test_analysis_layer.py
 ```
+
+**Follow the Prompts**:
+
+1. Analyze a repository
+2. Test a single file
+3. Run unit tests
+4. Exit
 
 ## ⚙️ Configuration
 
