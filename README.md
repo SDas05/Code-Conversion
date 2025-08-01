@@ -138,12 +138,6 @@ python tests/test_input_layer.py ./repo_path
 
 # Run analysis layer test
 python tests/test_analysis_layer.py
-
-Follow the Prompts:
-1. Analyze a repository
-2. Test a single file
-3. Run unit tests
-4. Exit
 ```
 
 ## ⚙️ Configuration
