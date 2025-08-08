@@ -186,16 +186,18 @@ The `config.json` file allows you to customize:
 
 Run the test suite to ensure everything works correctly:
 
+1. **Run the Test Pipeline**:
+
 ```bash
-# Run all tests
-pytest
-
-# Run specific test file
-pytest tests/test_analysis_layer.py
-
-# Run with verbose output
-pytest -v
+python interactive_pipeline_test.py
 ```
+
+2. **Follow the Prompts**:
+   1. Test Input Layer only
+   2. Test Analysis Layer only
+   3. Test Complete Pipeline (Input + Analysis)
+   4. Test Validation Layer (requires original + converted files)
+   5. Exit
 
 ## Supported Languages
 
