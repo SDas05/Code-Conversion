@@ -3,6 +3,21 @@ import re
 from app.input.file_metadata import FileMetadata
 from app.analysis.tree_sitter_util import parse_code
 
+class SegmentationEngine:
+    """
+    Engine for segmenting code into logical blocks.
+    """
+    
+    def __init__(self):
+        pass
+    
+    def segment_code(self, file_metadata: FileMetadata):
+        """
+        Recursively segment code into logical blocks using tree-sitter parsers.
+        Supports Python, JavaScript, Java, and C++ with tree-sitter, falls back to regex for other languages.
+        """
+        return segment_code(file_metadata)
+
 def segment_code(file_metadata: FileMetadata):
     """
     Recursively segment code into logical blocks using tree-sitter parsers.

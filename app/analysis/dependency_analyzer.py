@@ -4,6 +4,46 @@ from typing import Dict, List, Set, Tuple
 from app.input.file_metadata import FileMetadata
 from app.analysis.tree_sitter_util import parse_code
 
+class DependencyAnalyzer:
+    """
+    Analyzes dependencies in code files.
+    """
+    
+    def __init__(self):
+        pass
+    
+    def analyze_dependencies(self, file_path: str, content: str) -> Dict:
+        """
+        Analyze dependencies in the code file.
+        Returns information about imports, function calls, class relationships, etc.
+        """
+        # Create a FileMetadata object for compatibility
+        from pathlib import Path
+        file_metadata = FileMetadata(
+            path=Path(file_path),
+            language="unknown",  # Will be determined by extension
+            size=len(content),
+            loc=len(content.splitlines()),
+            complexity_score=0,
+            priority=1,
+            difficulty="low",
+            content=content
+        )
+        
+        # Determine language from file extension
+        extension = Path(file_path).suffix.lower()
+        language_map = {
+            ".py": "python",
+            ".js": "javascript", 
+            ".java": "java",
+            ".cpp": "cpp",
+            ".c": "c",
+            ".cs": "c#"
+        }
+        file_metadata.language = language_map.get(extension, "unknown")
+        
+        return analyze_dependencies(file_metadata)
+
 def analyze_dependencies(file_metadata: FileMetadata) -> Dict:
     """
     Analyze dependencies in the code file.

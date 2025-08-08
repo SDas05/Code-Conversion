@@ -2,7 +2,7 @@ from typing import List
 from pathlib import Path
 from app.input.file_metadata import FileMetadata
 
-class PreprocessingQueue:
+class Preprocessor:
     """
     Manages a queue of files to be preprocessed.
     """

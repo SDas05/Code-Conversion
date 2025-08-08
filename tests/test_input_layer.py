@@ -11,8 +11,8 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from app.input.repo_scanner import RepositoryScanner
-from app.input.file_classifier import FileType
-from app.input.preprocessing import PreprocessingQueue
+from app.input.file_classifier import FileClassifier
+from app.input.preprocessing import Preprocessor
 
 
 def clone_github_repo(git_url: str) -> str:
@@ -35,8 +35,8 @@ def run_input_layer(repo_path: str):
 
     # Initialize components
     scanner = RepositoryScanner(repo_path)
-    classifier = FileType()
-    queue = PreprocessingQueue()
+    classifier = FileClassifier()
+    queue = Preprocessor()
 
     # Step 1: Scan files
     files = scanner.scan()

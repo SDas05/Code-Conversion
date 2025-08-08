@@ -1,5 +1,5 @@
 from app.input.repo_scanner import RepositoryScanner
-from app.input.file_classifier import FileType
+from app.input.file_classifier import FileClassifier
 from app.analysis.segmentation_engine import segment_code
 from app.analysis.context_extractor import extract_context
 from app.conversion.prompt_builder import build_prompt
@@ -148,7 +148,7 @@ def run_pipeline():
 
         print(f"Found {len(files_with_chunks)} files to process")
         
-        classifier = FileType()
+        classifier = FileClassifier()
         processed_files = 0
         converted_files = 0
 

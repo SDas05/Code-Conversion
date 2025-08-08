@@ -12,7 +12,7 @@ from app.analysis.segmentation_engine import segment_code
 from app.analysis.context_extractor import extract_context
 from app.input.file_metadata import FileMetadata
 from app.input.repo_scanner import RepositoryScanner
-from app.input.file_classifier import FileType
+from app.input.file_classifier import FileClassifier
 
 def print_segment_details(segment: Dict[str, Any], index: int, file_path: str):
     """Print detailed information about a segment"""
@@ -243,7 +243,7 @@ def analyze_repository_segmentation(repo_path: str) -> Dict[str, Any]:
     scanner = RepositoryScanner(repo_path)
     files_with_chunks = scanner.scan_with_chunks()
     
-    classifier = FileType()
+    classifier = FileClassifier()
     results = {
         "total_files": 0,
         "supported_languages": 0,
@@ -362,7 +362,7 @@ def test_single_file_segmentation(file_path: str):
             content = f.read()
 
         #file classification
-        classifier = FileType()
+        classifier = FileClassifier()
         metadata = classifier.classify_file(Path(file_path), content)
         metadata.content = content 
         

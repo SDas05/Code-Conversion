@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from app.input.file_metadata import FileMetadata
 
-class FileType:
+class FileClassifier:
 
     """
     Classifies files based on their extensions and provides metadata.
